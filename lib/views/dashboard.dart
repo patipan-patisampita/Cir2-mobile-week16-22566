@@ -22,6 +22,58 @@ class _DashboardPageState extends State<DashboardPage> {
         centerTitle: true,
         title: Text(widget.title),
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            const UserAccountsDrawerHeader(
+              accountName: Text("Elon Musk"),
+              accountEmail: Text("elon@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                // child: Icon(Icons.android),
+                backgroundImage: NetworkImage(
+                    'https://upload.wikimedia.org/wikipedia/commons/0/08/Elon_Musk_at_a_Press_Conference.jpg'),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text("Dashboard"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const DashboardPage(title: "Dashboard Page"),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.apps),
+              title: const Text("About Page"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AboutPage(title: "About Page"),
+                  ),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text("Profile Page"),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AboutPage(title: "Profile Page"),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
       body: Container(
         padding: const EdgeInsets.all(10.0),
         child: GridView.count(
@@ -57,7 +109,8 @@ class _DashboardPageState extends State<DashboardPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const ProfilePage(title: "Profile Page"),
+                    builder: (context) =>
+                        const ProfilePage(title: "Profile Page"),
                   ),
                 );
               },

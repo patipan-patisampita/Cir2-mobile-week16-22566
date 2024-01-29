@@ -24,9 +24,9 @@ class _HomePageState extends State<HomePage> {
             child: ListTile(
               title: Text("Username:$index"),
               subtitle: Text("Mark Zuckerberg:$index"),
-              leading: const CircleAvatar(
+              leading: CircleAvatar(
                 radius: 20.0,
-                child: Text("An"),
+                child: Text(("An").toString().toUpperCase()),
               ),
               trailing: Container(
                 width: 150.0,
