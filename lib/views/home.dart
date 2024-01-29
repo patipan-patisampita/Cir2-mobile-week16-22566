@@ -19,21 +19,34 @@ class _HomePageState extends State<HomePage> {
       body: ListView.builder(
         itemCount: 5,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text("Username:$index"),
-            subtitle: Text("Mark Zuckerberg:$index"),
-            leading: const CircleAvatar(
-              radius: 20.0,
-              child: Text("An"),
-            ),
-            trailing: Container(
-              width: 150.0,
-              child: Row(
-                children: [
-                  IconButton(
+          return Card(
+            color: Colors.orange,
+            child: ListTile(
+              title: Text("Username:$index"),
+              subtitle: Text("Mark Zuckerberg:$index"),
+              leading: const CircleAvatar(
+                radius: 20.0,
+                child: Text("An"),
+              ),
+              trailing: Container(
+                width: 150.0,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.edit, color: Colors.teal)),
-                ],
+                      icon: const Icon(Icons.edit, color: Colors.teal),
+                    ),
+                     IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.delete, color: Colors.red),
+                    ),
+                     IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.list_alt_outlined, color: Colors.blueAccent),
+                    ),
+                  ],
+                ),
               ),
             ),
           );
