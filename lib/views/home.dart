@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         itemCount: 5,
         itemBuilder: (context, index) {
           return Card(
-            color: Colors.orange,
+            // color: Colors.orange,
             child: ListTile(
               title: Text("Username:$index"),
               subtitle: Text("Mark Zuckerberg:$index"),
