@@ -26,6 +26,16 @@ class _HomePageState extends State<HomePage> {
               radius: 20.0,
               child: Text("An"),
             ),
+            trailing: Container(
+              width: 150.0,
+              child: Row(
+                children: [
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(Icons.edit, color: Colors.teal)),
+                ],
+              ),
+            ),
           );
         },
       ),
