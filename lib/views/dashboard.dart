@@ -37,8 +37,8 @@ class _DashboardPageState extends State<DashboardPage> {
             ListTile(
               leading: const Icon(Icons.home),
               title: const Text("Dashboard"),
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                await Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
@@ -66,7 +66,8 @@ class _DashboardPageState extends State<DashboardPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const AboutPage(title: "Profile Page"),
+                    builder: (context) =>
+                        const AboutPage(title: "Profile Page"),
                   ),
                 );
               },
@@ -83,36 +84,39 @@ class _DashboardPageState extends State<DashboardPage> {
           children: [
             CardWidget(
               titleMenu: 'RESTful API',
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                await Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const HomePage(title: "RESTful API"),
                   ),
                 );
+                debugPrint("Dashboard Page");
               },
             ),
             CardWidget(
               titleMenu: 'About Page',
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                await Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const AboutPage(title: "About Page"),
                   ),
                 );
+                debugPrint("About Page");
               },
             ),
             CardWidget(
               titleMenu: 'Profile Page',
-              onTap: () {
-                Navigator.push(
+              onTap: () async {
+                await Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
                         const ProfilePage(title: "Profile Page"),
                   ),
                 );
+                debugPrint("Profile Page");
               },
             ),
           ],
